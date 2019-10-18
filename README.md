@@ -24,7 +24,7 @@
 msbuild /m /p:Configuration=Release nsis_package_prep.vcxproj  
 msbuild /m /p:Configuration=Release nsis_package.vcxproj  
 
-这一步，一般情况下，第一条命令不会出错，问题出在第二条命令。  
+这一步，一般情况下，第一条命令不会出错，问题出在第二条命令（注意32位需要加上/p:Platform=Win32）。  
 
 第二条命令执行一会儿后，提示...user-guide.chm not found 的错误，仔细检查依赖没问题，google搜到一个wireshark开发者问了相同的问题。看回复莫有解决方法，再三查看开发者的回复，发现他重新安装HTMLHelp后重新编译竟然成功了。 
 
